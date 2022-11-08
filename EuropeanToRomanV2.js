@@ -65,4 +65,9 @@ function solution(number){
     return arrOfLetters.join('');
   }
 
-  console.log(solution(2007))
+  let valueForm = document.getElementById('my-form').elements;
+  let inputNumber = valueForm['fornumber']
+  let button = document.getElementById('button');
+  button.onclick = function() {
+    document.getElementById('change-text').innerHTML = `${solution(inputNumber.value)}`
+  }
